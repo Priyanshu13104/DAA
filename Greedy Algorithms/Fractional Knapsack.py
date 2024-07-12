@@ -7,11 +7,11 @@ def knapsack(values:list[int], weight:list[int], capacity:int)->float:
     current_w = 0
     for item in items:
         w, v = item[0], item[1]
-        if current_w + w <= C:
+        if current_w + w <= capacity:
             total_value += v
             current_w += w
         else:
-            total_value = v*((C-current_w)/w)
+            total_value += v*((capacity-current_w)/w)
             break
     return total_value
 
