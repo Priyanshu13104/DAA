@@ -1,3 +1,5 @@
+from collections import defaultdict
+from collections import Counter
 # def frequency_map(s:str)->dict:
 #     f = dict()
 #     for x in s:
@@ -10,13 +12,16 @@
 
 
 # default dict
-from collections import defaultdict
 
 def frequency_map(s:str)->dict:
-    f = defaultdict(int)
-    for x in s:
-        f[x] += 1
+#     f = defaultdict(int)
+#     for x in s:
+#         f[x] += 1
+#     return f
+
+    f = Counter(s)
     return f
+
 
 print(frequency_map('Priyanshu'))
 
